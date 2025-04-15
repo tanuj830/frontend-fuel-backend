@@ -1,22 +1,17 @@
 package com.frontendfuel.v1.entities;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+@Document(collection = "tags")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Tag {
-    
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
 
-    @Column(unique = true)
     private String name;
 }

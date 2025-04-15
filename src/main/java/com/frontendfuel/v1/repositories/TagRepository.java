@@ -1,8 +1,6 @@
 package com.frontendfuel.v1.repositories;
-
 import com.frontendfuel.v1.entities.Tag;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface TagRepository extends JpaRepository<Tag, String> {
-    // Additional methods if needed
+public interface TagRepository extends MongoRepository<Tag, String> {
 }
